@@ -11,30 +11,31 @@
 <body>
     <header>
         <nav>
-            <a href="#">a</a>
+            <a href="./index.html"><img src="./assets/logo.png" alt="Página de inicio" class="icono-inicio"></a>
         </nav>
     </header>
     <main>
-        <section class="campo-entrada">
-            <!--
-                <input type="text" id="textField" placeholder="Escribe algo aquí...">
-                -->
-            <textarea id="textField" placeholder="Escribe algo aquí..."></textarea>
+        <section class="entrada">
+            <textarea class="entrada-texto" placeholder="Escribe algo aquí..."></textarea>
             <br>
-            <button class="container__boton">Encriptar</button>
-            <button class="container__boton">Desencriptar</button>
+            <div>
+                <img src="./assets/advertencia.png" alt="advertencia">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <button class="boton encriptar">Encriptar</button>
+            <button class="boton desencriptar">Desencriptar</button>
         </section>
-        <section class="campo-salida">
-            <div id="result">El resultado procesado se mostrará aquí.</div>
+        <section class="salida">
+            <img class="salida-persona" src="./assets/persona.png" alt="persona con lupa">
+            <p class="parrafo-1">Ningún texto fue encontrado</p>
+            <p class="parrafo-2">Ingresa el texto que desees encriptar o desencriptar.</p>
         </section>
 
     </main>
     <footer>
         2024 - Create by Hannu Portillo
-        <ul>
-            <li><a href="https://github.com/hpord" target="_blank">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/hannu-portillo-26b990213/" target="_blank">Linkedin</a></li>
-        </ul>
+        <a href="https://github.com/hpord" target="_blank"><img src="./assets/github.png" alt="Github"></a>
+        <a href="https://www.linkedin.com/in/hannu-portillo-26b990213/" target="_blank"><img src="./assets/linkedin.png" alt="Linkedin"></a>
     </footer>
     <script src="app.js"></script>
 </body>
