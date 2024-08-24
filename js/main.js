@@ -7,7 +7,7 @@ function asignarTextoElemento(elemento, texto) {
 }
 
 function verificarMinusculas(text) {
-  return true;
+  return /^[a-z]+$/.test(text);
 }
 
 const botonEncriptar = document.querySelector(".encriptar");
