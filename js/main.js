@@ -1,25 +1,29 @@
-import { encriptar, desencriptar } from './cripto.js';
+import { encriptar, desencriptar } from "./cripto.js";
 
 function asignarTextoElemento(elemento, texto) {
-    let elementoHTML = document.querySelector(elemento);
-    elementoHTML.innerHTML = texto;
-    return;
+  let elementoHTML = document.querySelector(elemento);
+  elementoHTML.innerHTML = texto;
+  return;
 }
 
 function verificarMinusculas(text) {
-    return true;
+  return true;
 }
 
-const botonEncriptar = document.getElementById('encriptar');
+const botonEncriptar = document.querySelector(".encriptar");
 
-botonEncriptar.addEventListener('click', function() {
-    const text = document.getElementById('textField').value;
-    /*if (!verificarMinusculas(text)) {
-        alert("Solo minusculas");
-        return;
-    }*/
-   console.log(text);
+botonEncriptar.addEventListener("click", function () {
+  let advertenciaParrafo = document.querySelector(".advertencia-parrafo");
+  advertenciaParrafo.style.color = "#495057";
+  advertenciaParrafo.style.fontSize = "0.75rem";
+  const text = document.getElementById("entrada-texto").value;
+  if (!verificarMinusculas(text)) {
+    advertenciaParrafo.style.color = "#FF0000";
+    advertenciaParrafo.style.fontSize = "1rem";
+    return;
+  }
+
+  /*console.log(text);
    console.log(encriptar(text));
-    asignarTextoElemento('.result', encriptar(text));
-
+    asignarTextoElemento('.result', encriptar(text));*/
 });
