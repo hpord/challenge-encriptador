@@ -55,12 +55,22 @@ main {
 .entrada-texto {
   width: 100%;
   min-height: 50vh;
-  border-radius: 1.5rem;
+  background-color: transparent;
+  font-family: var(--fuente-inter);
+  font-size: 2rem;
+  color: var(--color-dark-blue-300);
   resize: none;
+  border: none;
+}
+
+.entrada-texto:focus{
+  outline: none
 }
 
 .entrada-texto::placeholder {
-  color: #0A3871;
+  /*position: relative;
+  top: 0.5rem;*/
+  color: var(--color-dark-blue-300);;
 }
 
 .contenedor-advertencia {
