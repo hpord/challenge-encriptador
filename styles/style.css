@@ -16,12 +16,14 @@
 }
 
 body {
+  width: 100%;
+  padding: 1% 1% 1% 5%;
   background-color: var(--color-fondo-claro);
   font-family: var(--fuente-inter);
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   min-height: 5.5rem;
 }
 
@@ -33,7 +35,8 @@ header {
 }
 
 main {
-  width: 100vw;
+  width: auto;
+  /*padding: 1% 1% 1% 10%;*/
   /*height: 90vh;*/
   font-optical-sizing: auto;
   font-weight: 400;
@@ -45,7 +48,7 @@ main {
 }
 
 .entrada {
-  width: 70vw;
+  width: 70%;
   /*padding: 0% 20%;*/
 }
 
@@ -92,8 +95,8 @@ main {
 .boton {
   font-family: var(--fuente-inter);
   font-size: 1rem;
-  width: 42%;
-  padding: 1% 0% 1% 0%;
+  width: 48%;
+  padding: 3% 0% 3% 0%;
   border-style: solid;
   border-color: var(--color-dark-blue-300);
   border-radius: 1.5rem;
@@ -113,18 +116,68 @@ main {
 }
 
 .salida {
-  width: 30vw;
+  width: 30%;
   padding: 2% 2% 2% 2%;
 }
 
 .contenedor-salida-texto {
+  padding: 2% 2% 2% 2%;
+  /*background-color: transparent;*/
   background-color: white;
-  border-radius: 1rem;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  justify-content: center;
+  border-radius: 2rem;
+}
+
+.contenedor-textarea-salida {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: transparent;
+  align-items: start;
+  justify-content: center;
+
+  /*top: 50%;*/
+  /*z-index: 0;*/
+}
+
+.salida-texto {
+  background-color: transparent;
+  width: 100%;
+  min-height: 61vh;
+  font-family: var(--fuente-inter);
+  font-size: 2rem;
+  color: var(--color-dark-blue-300);
+  resize: none;
+  border: none;
+}
+
+.salida-texto:focus {
+  outline: none;
+}
+
+.copiar {
+  width: 50%;
+  background-color: white;
+  color: var(--color-dark-blue-300);
+  border-width: 1px;
+  position: relative;
+  left: 25%;
+  border-radius: 1rem;
+  padding: 6% 0% 6% 0%;
+}
+
+.contenedor-persona {
+  /*z-index: 1;*/
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  top: 0em;
 }
 
 p {
@@ -144,15 +197,20 @@ p {
 }
 
 footer {
-  width: 100vw;
-  background-color: black;
-  color: aqua;
+  width: 100%;
+  color: var(--color-dark-blue-300);
+  font-weight: 400;
+  margin: 2% 0% 2% 0%;
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
+  body {
+    padding: 5%;
+  }
+
   header {
     min-height: 7.5rem;
   }
@@ -171,7 +229,31 @@ footer {
   }
 
   .entrada {
-    width: 100vw;
+    width: 100%;
+  }
+
+  .contenedor-entrada-texto {
+    padding: 5% 2% 2% 2%;
+  }
+
+  .contenedor-advertencia {
+    padding: 2% 2% 1% 2%;
+  }
+
+  .contenedor-botones {
+    padding: 1% 2% 1% 2%;
+  }
+
+  .salida {
+    width: 100%;
+    padding: 2% 2% 2% 2%;
+  }
+
+  .copiar {
+    width: 100%;
+    left: 0%;
+    border-radius: 1.5rem;
+    padding: 3% 0% 3% 0%;
   }
 
   .salida-persona {
@@ -181,7 +263,7 @@ footer {
 
 @media screen and (max-width: 500px) {
   header {
-    width: 100vw;
+    width: 100%;
     min-height: 4.5rem;
   }
   .icono-inicio {
@@ -192,5 +274,9 @@ footer {
 
   .contenedor-botones {
     flex-direction: column;
+  }
+
+  .boton {
+    width: 100%;
   }
 }

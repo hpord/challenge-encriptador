@@ -12,6 +12,7 @@ function verificarMinusculas(text) {
 
 const botonEncriptar = document.querySelector(".encriptar");
 const botonDesencriptar = document.querySelector(".desencriptar");
+const botonCopiar = document.querySelector(".copiar");
 
 botonEncriptar.addEventListener("click", function () {
   let advertenciaParrafo = document.querySelector(".advertencia-parrafo");
@@ -24,7 +25,7 @@ botonEncriptar.addEventListener("click", function () {
     return;
   }
   console.log(encriptar(text));
-  /*asignarTextoElemento('.result', encriptar(text));*/
+  asignarTextoElemento(".salida-texto", encriptar(text));
 });
 
 botonDesencriptar.addEventListener("click", function () {
@@ -38,5 +39,19 @@ botonDesencriptar.addEventListener("click", function () {
     return;
   }
   console.log(desencriptar(text));
-  /*asignarTextoElemento('.result', encriptar(text));*/
+  asignarTextoElemento(".salida-texto", desencriptar(text));
+});
+
+botonCopiar.addEventListener("click", function () {
+  const textarea = document.getElementById("salida-texto");
+  textarea.select();
+  textarea.setSelectionRange(0, 99999);
+  navigator.clipboard
+    .writeText(textarea.value)
+    .then(function () {
+      //alert("Texto copiado al portapapeles");
+    })
+    .catch(function (err) {
+      console.error("Error al copiar el texto: ", err);
+    });
 });
