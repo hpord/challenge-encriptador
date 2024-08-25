@@ -279,4 +279,12 @@ footer {
   .boton {
     width: 100%;
   }
+
+  .encriptar {
+    margin-bottom: 5%;
+  }
+
+  .encriptar {
+    margin-top: 5%;
+  }
 }
