@@ -17,14 +17,13 @@
 
 body {
   width: 100%;
-  padding: 1% 1% 1% 5%;
   background-color: var(--color-fondo-claro);
   font-family: var(--fuente-inter);
 }
 
 header {
-  width: 100%;
-  min-height: 5.5rem;
+  width: 70%;
+  min-height: 5rem;
 }
 
 .icono-inicio {
@@ -36,6 +35,7 @@ header {
 
 main {
   width: auto;
+  padding: 1% 1% 1% 10%;
   /*padding: 1% 1% 1% 10%;*/
   /*height: 90vh;*/
   font-optical-sizing: auto;
@@ -48,7 +48,7 @@ main {
 }
 
 .entrada {
-  width: 70%;
+  width: 65%;
   /*padding: 0% 20%;*/
 }
 
@@ -116,7 +116,7 @@ main {
 }
 
 .salida {
-  width: 30%;
+  width: 35%;
   padding: 2% 2% 2% 2%;
 }
 
@@ -125,7 +125,7 @@ main {
   /*background-color: transparent;*/
   background-color: white;
   width: 100%;
-  height: 100%;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -135,7 +135,7 @@ main {
 
 .contenedor-textarea-salida {
   padding: 5%;
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 100%;
   background-color: transparent;
@@ -149,7 +149,7 @@ main {
 .salida-texto {
   background-color: transparent;
   width: 100%;
-  min-height: 61vh;
+  min-height: 50vh;
   font-family: var(--fuente-inter);
   font-size: 2rem;
   color: var(--color-dark-blue-300);
@@ -174,10 +174,22 @@ main {
 
 .contenedor-persona {
   /*z-index: 1;*/
-  display: none;
+  width: 100%;
+  display: flex;
   flex-direction: column;
   align-items: start;
   top: 0em;
+}
+
+.salida-persona {
+  width: 100%;
+}
+
+.parrafos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 p {
@@ -207,9 +219,6 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
-  body {
-    padding: 5%;
-  }
 
   header {
     min-height: 7.5rem;
@@ -225,6 +234,7 @@ footer {
   }
 
   main {
+    padding: 5%;
     flex-direction: column;
   }
 
@@ -234,6 +244,11 @@ footer {
 
   .contenedor-entrada-texto {
     padding: 5% 2% 2% 2%;
+  }
+
+  .entrada-texto {
+    min-height: 40vh;
+    font-size: 1.5rem;
   }
 
   .contenedor-advertencia {
@@ -249,6 +264,17 @@ footer {
     padding: 2% 2% 2% 2%;
   }
 
+  .contenedor-salida-texto {
+    min-height: 0%;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .salida-texto {
+    min-height: 0%;
+    font-size: 1.5rem;
+  }
+
   .copiar {
     width: 100%;
     left: 0%;
@@ -259,6 +285,7 @@ footer {
   .salida-persona {
     display: none;
   }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -278,6 +305,7 @@ footer {
 
   .boton {
     width: 100%;
+    padding: 5%;
   }
 
   .encriptar {

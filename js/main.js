@@ -19,12 +19,18 @@ botonEncriptar.addEventListener("click", function () {
   advertenciaParrafo.style.color = "#495057";
   advertenciaParrafo.style.fontSize = "0.75rem";
   const text = document.getElementById("entrada-texto").value;
+  if (text.trim() === '' || text.trim() === undefined) {
+    document.querySelector('.contenedor-textarea-salida').style.display = 'none';
+    document.querySelector('.contenedor-persona').style.display = 'flex';
+    return;
+  }
   if (!verificarMinusculas(text)) {
     advertenciaParrafo.style.color = "#FF0000";
     advertenciaParrafo.style.fontSize = "1rem";
     return;
   }
-  console.log(encriptar(text));
+  document.querySelector('.contenedor-persona').style.display = 'none';
+  document.querySelector('.contenedor-textarea-salida').style.display = 'flex';
   asignarTextoElemento(".salida-texto", encriptar(text));
 });
 
@@ -33,12 +39,18 @@ botonDesencriptar.addEventListener("click", function () {
   advertenciaParrafo.style.color = "#495057";
   advertenciaParrafo.style.fontSize = "0.75rem";
   const text = document.getElementById("entrada-texto").value;
+  if (text.trim() === '' || text.trim() === undefined) {
+    document.querySelector('.contenedor-textarea-salida').style.display = 'none';
+    document.querySelector('.contenedor-persona').style.display = 'flex';
+    return;
+  }
   if (!verificarMinusculas(text)) {
     advertenciaParrafo.style.color = "#FF0000";
     advertenciaParrafo.style.fontSize = "1rem";
     return;
   }
-  console.log(desencriptar(text));
+  document.querySelector('.contenedor-persona').style.display = 'none';
+  document.querySelector('.contenedor-textarea-salida').style.display = 'flex';
   asignarTextoElemento(".salida-texto", desencriptar(text));
 });
 
