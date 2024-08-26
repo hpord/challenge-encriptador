@@ -1,11 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-  --color-fondo-claro: #f3f5fc;
-  --color-gray-400: #495057;
-  --color-gray-500: #343a40;
-  --color-dark-blue-300: #0a3871;
-  --color-celeste: #d8dfe8;
+  --background-color: #f3f5fc;
+  --secondary-text-color: #495057;
+  --primary-text-color: #343a40;
+  --similar-color: #d8dfe8;
+  --different-color: #0a3871;
+  --salida-color: white;
+  --fuente-inter: "Inter", sans-serif;
+}
+
+[data-theme="dark"] {
+  --background-color: #111827;
+  --secondary-text-color: #495057;
+  --primary-text-color: #343a40;
+  --similar-color: #d8dfe8;
+  --different-color: #0a3871;
+  --salida-color: white;
   --fuente-inter: "Inter", sans-serif;
 }
 
@@ -17,7 +28,7 @@
 
 body {
   width: 100%;
-  background-color: var(--color-fondo-claro);
+  background-color: var(--background-color);
   font-family: var(--fuente-inter);
 }
 
@@ -56,7 +67,7 @@ main {
   background-color: transparent;
   font-family: var(--fuente-inter);
   font-size: 2rem;
-  color: var(--color-dark-blue-300);
+  color: var(--different-color);
   resize: none;
   border: none;
 }
@@ -66,13 +77,13 @@ main {
 }
 
 .entrada-texto::placeholder {
-  color: var(--color-dark-blue-300);
+  color: var(--different-color);
 }
 
 .contenedor-advertencia {
   padding: 2% 2% 1% 5%;
   display: flex;
-  color: var(--color-gray-400);
+  color: var(--secondary-text-color);
   font-size: 0.9rem;
   gap: 2%;
   align-items: flex-end;
@@ -95,20 +106,20 @@ main {
   width: 48%;
   padding: 3% 0% 3% 0%;
   border-style: solid;
-  border-color: var(--color-dark-blue-300);
+  border-color: var(--different-color);
   border-radius: 1.5rem;
   cursor: pointer;
   resize: none;
 }
 
 .encriptar {
-  background-color: var(--color-dark-blue-300);
-  color: white;
+  background-color: var(--different-color);
+  color: var(--similar-color);
 }
 
 .desencriptar {
-  background-color: var(--color-celeste);
-  color: var(--color-dark-blue-300);
+  background-color: var(--similar-color);
+  color: var(--different-color);
   border-width: 1px;
 }
 
@@ -119,7 +130,7 @@ main {
 
 .contenedor-salida-texto {
   padding: 2% 2% 2% 2%;
-  background-color: white;
+  background-color: var(--salida-color);
   width: 100%;
   min-height: 70vh;
   display: flex;
@@ -145,7 +156,7 @@ main {
   min-height: 50vh;
   font-family: var(--fuente-inter);
   font-size: 2rem;
-  color: var(--color-dark-blue-300);
+  color: var(--different-color);
   resize: none;
   border: none;
 }
@@ -156,8 +167,8 @@ main {
 
 .copiar {
   width: 50%;
-  background-color: white;
-  color: var(--color-dark-blue-300);
+  background-color: var(--similar-color);
+  color: var(--different-color);
   border-width: 1px;
   position: relative;
   left: 25%;
@@ -190,19 +201,19 @@ p {
 .parrafo-1 {
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--color-gray-500);
+  color: var(--primary-text-color);
 }
 
 .parrafo-2 {
   font-weight: 400;
   font-size: 1rem;
-  color: var(--color-gray-400);
+  color: var(--secondary-text-color);
 }
 
 footer {
   width: 100%;
   padding: 0% 5% 0% 5%;
-  color: var(--color-dark-blue-300);
+  color: var(--different-color);
   font-weight: 400;
   margin: 2% 0% 2% 0%;
   display: flex;

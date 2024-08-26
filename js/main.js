@@ -67,3 +67,30 @@ botonCopiar.addEventListener("click", function () {
       console.error("Error al copiar el texto: ", err);
     });
 });
+
+// Función para cambiar el tema
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  let targetTheme = "light";
+
+  if (currentTheme === "light") {
+    targetTheme = "dark";
+  }
+
+  document.documentElement.setAttribute("data-theme", targetTheme);
+  localStorage.setItem("theme", targetTheme);
+}
+
+// Función para establecer el tema inicial
+function setInitialTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  }
+}
+
+// Añadir evento al botón
+document.getElementById("themeToggle").addEventListener("click", toggleTheme);
+
+// Establecer el tema inicial cuando se carga la página
+setInitialTheme();
