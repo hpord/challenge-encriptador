@@ -74,7 +74,7 @@ main {
   display: flex;
   color: var(--color-gray-400);
   font-size: 0.9rem;
-  gap: 3%;
+  gap: 2%;
   align-items: flex-end;
 }
 
