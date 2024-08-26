@@ -19,9 +19,10 @@ botonEncriptar.addEventListener("click", function () {
   advertenciaParrafo.style.color = "#495057";
   advertenciaParrafo.style.fontSize = "0.75rem";
   const text = document.getElementById("entrada-texto").value;
-  if (text.trim() === '' || text.trim() === undefined) {
-    document.querySelector('.contenedor-textarea-salida').style.display = 'none';
-    document.querySelector('.contenedor-persona').style.display = 'flex';
+  if (text.trim() === "" || text.trim() === undefined) {
+    document.querySelector(".contenedor-textarea-salida").style.display =
+      "none";
+    document.querySelector(".contenedor-persona").style.display = "flex";
     return;
   }
   if (!verificarMinusculas(text)) {
@@ -29,8 +30,8 @@ botonEncriptar.addEventListener("click", function () {
     advertenciaParrafo.style.fontSize = "1rem";
     return;
   }
-  document.querySelector('.contenedor-persona').style.display = 'none';
-  document.querySelector('.contenedor-textarea-salida').style.display = 'flex';
+  document.querySelector(".contenedor-persona").style.display = "none";
+  document.querySelector(".contenedor-textarea-salida").style.display = "flex";
   asignarTextoElemento(".salida-texto", encriptar(text));
 });
 
@@ -39,9 +40,10 @@ botonDesencriptar.addEventListener("click", function () {
   advertenciaParrafo.style.color = "#495057";
   advertenciaParrafo.style.fontSize = "0.75rem";
   const text = document.getElementById("entrada-texto").value;
-  if (text.trim() === '' || text.trim() === undefined) {
-    document.querySelector('.contenedor-textarea-salida').style.display = 'none';
-    document.querySelector('.contenedor-persona').style.display = 'flex';
+  if (text.trim() === "" || text.trim() === undefined) {
+    document.querySelector(".contenedor-textarea-salida").style.display =
+      "none";
+    document.querySelector(".contenedor-persona").style.display = "flex";
     return;
   }
   if (!verificarMinusculas(text)) {
@@ -49,8 +51,8 @@ botonDesencriptar.addEventListener("click", function () {
     advertenciaParrafo.style.fontSize = "1rem";
     return;
   }
-  document.querySelector('.contenedor-persona').style.display = 'none';
-  document.querySelector('.contenedor-textarea-salida').style.display = 'flex';
+  document.querySelector(".contenedor-persona").style.display = "none";
+  document.querySelector(".contenedor-textarea-salida").style.display = "flex";
   asignarTextoElemento(".salida-texto", desencriptar(text));
 });
 
@@ -60,9 +62,7 @@ botonCopiar.addEventListener("click", function () {
   textarea.setSelectionRange(0, 99999);
   navigator.clipboard
     .writeText(textarea.value)
-    .then(function () {
-      //alert("Texto copiado al portapapeles");
-    })
+    .then(function () {})
     .catch(function (err) {
       console.error("Error al copiar el texto: ", err);
     });

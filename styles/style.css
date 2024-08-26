@@ -36,15 +36,10 @@ header {
 main {
   width: auto;
   padding: 1% 1% 1% 10%;
-  /*padding: 1% 1% 1% 10%;*/
-  /*height: 90vh;*/
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   display: flex;
-  /*gap: 10%;*/
-  /*align-items: center;
-  justify-content: space-between;*/
 }
 
 .entrada {
@@ -72,8 +67,6 @@ main {
 }
 
 .entrada-texto::placeholder {
-  /*position: relative;
-  top: 0.5rem;*/
   color: var(--color-dark-blue-300);
 }
 
@@ -85,10 +78,8 @@ main {
 }
 
 .contenedor-botones {
-  /*min-height: 3rem;*/
   padding: 1% 2% 1% 5%;
   display: flex;
-  /*gap: 5%;*/
   justify-content: space-between;
 }
 
@@ -141,9 +132,6 @@ main {
   background-color: transparent;
   align-items: start;
   justify-content: center;
-
-  /*top: 50%;*/
-  /*z-index: 0;*/
 }
 
 .salida-texto {
@@ -219,7 +207,6 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
-
   header {
     min-height: 7.5rem;
   }
@@ -285,7 +272,6 @@ footer {
   .salida-persona {
     display: none;
   }
-
 }
 
 @media screen and (max-width: 500px) {
