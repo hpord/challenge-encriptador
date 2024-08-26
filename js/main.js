@@ -17,7 +17,7 @@ const botonCopiar = document.querySelector(".copiar");
 botonEncriptar.addEventListener("click", function () {
   let advertenciaParrafo = document.querySelector(".advertencia-parrafo");
   advertenciaParrafo.style.color = "#495057";
-  advertenciaParrafo.style.fontSize = "0.75rem";
+  advertenciaParrafo.style.fontSize = "0.9rem";
   const text = document.getElementById("entrada-texto").value;
   if (text.trim() === "" || text.trim() === undefined) {
     document.querySelector(".contenedor-textarea-salida").style.display =
@@ -27,7 +27,7 @@ botonEncriptar.addEventListener("click", function () {
   }
   if (!verificarMinusculas(text)) {
     advertenciaParrafo.style.color = "#FF0000";
-    advertenciaParrafo.style.fontSize = "1rem";
+    advertenciaParrafo.style.fontSize = "1.1rem";
     return;
   }
   document.querySelector(".contenedor-persona").style.display = "none";

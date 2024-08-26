@@ -72,8 +72,15 @@ main {
 .contenedor-advertencia {
   padding: 2% 2% 1% 5%;
   display: flex;
-  font-size: 0.75rem;
   color: var(--color-gray-400);
+  font-size: 0.9rem;
+  gap: 3%;
+  align-items: flex-end;
+}
+
+.img-advertencia {
+  width: 1rem;
+  height: 1rem;
 }
 
 .contenedor-botones {
