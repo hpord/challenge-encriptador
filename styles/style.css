@@ -44,7 +44,6 @@ main {
 
 .entrada {
   width: 65%;
-  /*padding: 0% 20%;*/
 }
 
 .contenedor-entrada-texto {
@@ -113,7 +112,6 @@ main {
 
 .contenedor-salida-texto {
   padding: 2% 2% 2% 2%;
-  /*background-color: transparent;*/
   background-color: white;
   width: 100%;
   min-height: 70vh;
@@ -161,11 +159,9 @@ main {
 }
 
 .contenedor-persona {
-  /*z-index: 1;*/
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: start;
   top: 0em;
 }
 
@@ -198,12 +194,28 @@ p {
 
 footer {
   width: 100%;
+  padding: 0% 5% 0% 5%;
   color: var(--color-dark-blue-300);
   font-weight: 400;
   margin: 2% 0% 2% 0%;
   display: flex;
+  font-size: 1rem;
+  align-items: start;
   justify-content: center;
   text-align: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.redes {
+  width: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 3%;
+}
+
+.redes > a > img {
+  width: 1.5rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -271,6 +283,14 @@ footer {
 
   .salida-persona {
     display: none;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .informacion {
+    justify-content: center;
   }
 }
 
