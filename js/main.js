@@ -26,8 +26,8 @@ botonEncriptar.addEventListener("click", function () {
     return;
   }
   if (!verificarMinusculas(text)) {
-    advertenciaParrafo.style.color = "#FF0000";
-    advertenciaParrafo.style.fontSize = "1.1rem";
+    advertenciaParrafo.style.color = "#FF3500";
+    advertenciaParrafo.style.fontSize = "1.2rem";
     return;
   }
   document.querySelector(".contenedor-persona").style.display = "none";
@@ -37,7 +37,7 @@ botonEncriptar.addEventListener("click", function () {
 
 botonDesencriptar.addEventListener("click", function () {
   let advertenciaParrafo = document.querySelector(".advertencia-parrafo");
-  advertenciaParrafo.style.color = "#495057";
+  advertenciaParrafo.style.color = "#FF0000";
   advertenciaParrafo.style.fontSize = "0.75rem";
   const text = document.getElementById("entrada-texto").value;
   if (text.trim() === "" || text.trim() === undefined) {
@@ -75,7 +75,14 @@ function toggleTheme() {
 
   if (currentTheme === "light") {
     targetTheme = "dark";
+    /*document.querySelector(".logo-claro").style.display = "none";
+    document.querySelector(".logo-oscuro").style.display = "flex";*/
   }
+
+  /*else {
+    document.querySelector(".logo-oscuro").style.display = "none";
+    document.querySelector(".logo-claro").style.display = "flex";
+  }*/
 
   document.documentElement.setAttribute("data-theme", targetTheme);
   localStorage.setItem("theme", targetTheme);

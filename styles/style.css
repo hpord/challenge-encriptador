@@ -8,16 +8,20 @@
   --different-color: #0a3871;
   --salida-color: white;
   --fuente-inter: "Inter", sans-serif;
+  --display-modo-oscuro: none;
+  --display-modo-claro: flex;
 }
 
 [data-theme="dark"] {
   --background-color: #111827;
-  --secondary-text-color: #495057;
-  --primary-text-color: #343a40;
-  --similar-color: #d8dfe8;
-  --different-color: #0a3871;
-  --salida-color: white;
+  --secondary-text-color: #E5E7EB;
+  --primary-text-color: #E5E7EB;
+  --similar-color: #003B4A;
+  --different-color: #A9792B;
+  --salida-color: #374151;
   --fuente-inter: "Inter", sans-serif;
+  --display-modo-claro: none;
+  --display-modo-oscuro: flex;
 }
 
 * {
@@ -34,14 +38,46 @@ body {
 
 header {
   width: 70%;
+  padding: 0% 5% 0% 0%;
   min-height: 5rem;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .icono-inicio {
+  display: flex;
   width: 7.5rem;
   position: relative;
   top: 2.5rem;
   left: 2.5rem;
+}
+
+.logo-claro {
+  display: var(--display-modo-claro);
+}
+
+.logo-oscuro {
+  display: var(--display-modo-oscuro);
+}
+
+#themeToggle {
+  background-color: transparent;
+}
+
+.modo {
+  width: 2rem;
+}
+
+.claro {
+  display: var(--display-modo-claro);
+}
+
+.oscuro {
+  display: var(--display-modo-oscuro);
 }
 
 main {
@@ -89,9 +125,22 @@ main {
   align-items: flex-end;
 }
 
+.advertencia-parrafo {
+  display: flex;
+  align-items: flex-end;
+}
+
 .img-advertencia {
   width: 1rem;
   height: 1rem;
+}
+
+.adv-1 {
+  display: var(--display-modo-claro);
+}
+
+.adv-2 {
+  display: var(--display-modo-oscuro);
 }
 
 .contenedor-botones {
@@ -187,6 +236,14 @@ main {
   width: 100%;
 }
 
+.persona-1 {
+  display: var(--display-modo-claro);
+}
+
+.persona-2 {
+  display: var(--display-modo-oscuro);
+}
+
 .parrafos {
   display: flex;
   flex-direction: column;
@@ -234,10 +291,17 @@ footer {
 
 .redes > a > img {
   width: 1.5rem;
+  background-color: #f3f5fc;
+  border-radius: 0.75rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+
 }
 
 @media screen and (max-width: 1000px) {
   header {
+    width: 100%;
     min-height: 7.5rem;
   }
 
@@ -314,7 +378,6 @@ footer {
 
 @media screen and (max-width: 500px) {
   header {
-    width: 100%;
     min-height: 4.5rem;
   }
   .icono-inicio {
