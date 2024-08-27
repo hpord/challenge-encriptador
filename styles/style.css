@@ -66,10 +66,15 @@ nav {
 
 #themeToggle {
   background-color: transparent;
+  position: relative;
+  top: 2.5rem;
+  border-style: none;
 }
 
 .modo {
   width: 2rem;
+  cursor: pointer;
+  resize: none;
 }
 
 .claro {
@@ -314,6 +319,10 @@ footer {
     object-position: center;
   }
 
+  #themeToggle {
+    top: 4.5rem;
+  }
+
   main {
     padding: 5%;
     flex-direction: column;
@@ -384,6 +393,10 @@ footer {
     position: relative;
     top: 1.5rem;
     left: 1rem;
+  }
+
+  #themeToggle {
+    top: 1.5rem;
   }
 
   .contenedor-botones {
