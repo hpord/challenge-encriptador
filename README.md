@@ -7,7 +7,8 @@ Esta aplicación permite encriptar textos, para que así puedas intercambiar men
 
 # Presentación (para diferentes dispositivos)
 
-![image](https://github.com/user-attachments/assets/0743b545-b1c0-41cd-a197-8b36b73f440f)
+<img style="display: block; margin: auto;" src="![image](https://github.com/user-attachments/assets/0743b545-b1c0-41cd-a197-8b36b73f440f)"/>
+
 
 ![image](https://github.com/user-attachments/assets/b31e3866-84d0-4c88-b7b5-78387eb187fb)
 
